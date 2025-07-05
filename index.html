@@ -23,7 +23,41 @@
 </head>
 
 <body>
-    <header></header>
+    <!-- section header  -->
+    <header class="navbar bg-base-100 shadow-sm mb-10 lg:w-11/12 mx-auto">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                    <li><a>Home</a></li>
+                    <li><a>Shop</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+            </div>
+            <a href="#" class="flex space-x-2 text-xl">
+                <img src="images/logo.webp" alt="logo">
+                <h2>Peddy</h2>
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-lg">
+                <li><a>Home</a></li>
+                <li><a>Shop</a></li>
+                <li><a>Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a class="btn border-gray-300 py-8 rounded-full bg-white ">
+                <img src="images/icon.gif" alt="" class="w-8 h-8">
+            </a>
+        </div>
+    </header>
     <main></main>
     <footer></footer>
 </body>
