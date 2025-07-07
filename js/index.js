@@ -24,12 +24,13 @@ const loadCards = (uri) => {
 const displayCategories = (categories) => {
     const category = document.getElementById('category')
     categories.forEach(element => {
-        // console.log(element);
         const div = document.createElement('div')
         const uri = 'https://openapi.programming-hero.com/api/peddy/category/' + element.category;
-        // console.log('new link', uri);
-        div.setAttribute('onclick', `loadCards('${uri}')`);
-        div.classList.add('flex', 'justify-between', 'items-center', 'py-6', 'px-20', 'border-2', 'border-gray-200', 'rounded-lg')
+        div.onclick = () => {
+            loadCards(uri);
+            setActiveCategory(div);
+        };
+        div.classList.add('flex', 'justify-between', 'items-center', 'py-6', 'px-20', 'border-2', 'border-gray-200', 'rounded-lg', 'hover:shadow-lg')
         div.innerHTML = `
         <img src="${element.category_icon}" alt="">
         <h3 class="text-2xl font-bold pl-5">${element.category}</h3>
@@ -39,7 +40,7 @@ const displayCategories = (categories) => {
 }
 
 const displayCards = (data) => {
-    if (data.length == 0){
+    if (data.length == 0) {
         document.getElementById('not-available').classList.remove('hidden')
         document.getElementById('display-cards').classList.add('hidden')
     }
@@ -47,7 +48,7 @@ const displayCards = (data) => {
         document.getElementById('not-available').classList.add('hidden')
         document.getElementById('display-cards').classList.remove('hidden')
     }
-   
+
     const cards = document.getElementById('display-cards')
     cards.innerText = '';
     // document.getElementById('spinner').classList.remove('hidden');
@@ -140,8 +141,47 @@ document.getElementById('btn-sort').addEventListener('click', function () {
     displayCards(forSort);
 })
 
+function setActiveCategory(selectedDiv) {
+    const all = selectedDiv.parentNode.querySelectorAll('div');
+    all.forEach(div => div.classList.remove('bg-emerald-50', 'rounded-full'));
+    selectedDiv.classList.remove('rounded-lg');
+    selectedDiv.classList.add('bg-emerald-50', 'rounded-full');
+}
+document.querySelectorAll('.btn-user').forEach(button => {
+    button.addEventListener('click', function () {
+        document.getElementById('my_modal_2').showModal();
+        document.getElementById('checkbox').addEventListener('click', function () {
+            if (this.checked) {
+                document.getElementById('re-pass-l').classList.remove('hidden')
+                document.getElementById('re-pass-i').classList.remove('hidden')
+                document.getElementById('btn-toggle').innerText = 'Sign Up'
+            }
+            else {
+                document.getElementById('re-pass-l').classList.add('hidden')
+                document.getElementById('re-pass-i').classList.add('hidden')
+                document.getElementById('btn-toggle').innerText = 'Sign In'
+            }
+        });
+    })
+
+})
+
+document.getElementById('btn-more').addEventListener('click', function () {
+    document.getElementById('btn-more').classList.add('hidden')
+    document.getElementById('extra-text').classList.remove('hidden')
+    document.getElementById('btn-less').classList.remove('hidden')
+})
+document.getElementById('btn-less').addEventListener('click', function () {
+    document.getElementById('btn-less').classList.add('hidden')
+    document.getElementById('extra-text').classList.add('hidden')
+    document.getElementById('btn-more').classList.remove('hidden')
+})
+
+
 
 
 
 loadCategories(uri_category);
 loadCards(uri_pets);
+
+

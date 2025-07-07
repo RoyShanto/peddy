@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -26,7 +26,7 @@
 
 <body>
     <!-- section header  -->
-    <header class="navbar bg-base-100 shadow-sm mb-10 lg:w-11/12 mx-auto">
+    <header class="navbar bg-base-100 mb-10 md:w-11/12 mx-auto sticky top-0 z-50">
         <div class="navbar-start">
             <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -37,79 +37,162 @@
                     </svg>
                 </div>
                 <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                    <li><a>Home</a></li>
-                    <li><a>Shop</a></li>
-                    <li><a>Contact</a></li>
+                    <li><a href="#banner">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#footer">Contact</a></li>
                 </ul>
             </div>
-            <a href="#" class="flex space-x-2 text-xl">
+            <a href="#" class="flex space-x-3 text-3xl font-bold">
                 <img src="images/logo.webp" alt="logo">
                 <h2>Peddy</h2>
             </a>
         </div>
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1 text-lg">
-                <li><a>Home</a></li>
-                <li><a>Shop</a></li>
-                <li><a>Contact</a></li>
+                <li><a href="#banner">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#footer">Contact</a></li>
             </ul>
         </div>
         <div class="navbar-end">
-            <a href="user" class="btn border-gray-300 py-8 rounded-full bg-white ">
+            <a id="" class="btn border-gray-300 py-8 rounded-full bg-white btn-user">
                 <img src="images/icon.gif" alt="" class="w-8 h-8">
             </a>
         </div>
     </header>
-    <main>
+
+    <main class="w-11/12 mx-auto">
         <!-- section banner  -->
-        <div class="w-11/12 mx-auto text-center space-y-6">
-            <p class="text-gray-500 text-2xl">Bringing Families Together ❤️‍🔥 </p>
-            <h1 class="lg:text-7xl md:text-5xl max-sm:text-3xl font-bold">Your Path to Adoption <br
-                    class="max-sm:hidden"> Starts Here</h1>
-            <p class="text-base text-gray-500">It is a long established fact that a reader will be distracted by the
-                readable content of a page when looking <br class="lg:block md:hidden max-sm:hidden"> at its layout. The
-                point of using Lorem Ipsum is that it has a.</p>
-            <button class="btn bg-emerald-800 rounded-lg text-white">View More</button>
+        <div id="banner" class="text-center space-y-6">
+            <div class="space-y-6 lg:w-1/2 mx-auto">
+                <p class="text-gray-500 text-2xl">Bringing Families Together ❤️‍🔥 </p>
+                <h1 class="lg:text-7xl md:text-5xl max-sm:text-3xl font-bold">Your Path to Adoption Starts Here</h1>
+                <span class="text-base text-gray-500">It is a long established fact that a reader will be distracted by
+                    the
+                    readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has
+                    a.</span>
+                <span id="extra-text" class="text-base text-gray-500 hidden">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Perspiciatis modi odit accusamus, corporis assumenda illum iste optio voluptatem,
+                    aspernatur voluptatum mollitia? Alias culpa rerum nostrum illum exercitationem. Libero dolores
+                    tempore in inventore suscipit excepturi, deserunt officia, laborum eaque ipsum alias.</span><br>
+                <div class="mt-6">
+                    <button id="btn-more" class="btn bg-emerald-800 rounded-lg text-white">View More</button>
+                    <button id="btn-less" class="btn bg-emerald-800 rounded-lg text-white hidden">View Less</button>
+                </div>
+            </div>
 
             <img src="images/pet.webp" alt="" class="mx-auto">
         </div>
         <!-- section Adopt  -->
-        <div class="w-11/12 mx-auto text-center space-y-6 mt-14">
+        <div id="shop" class="text-center space-y-6 mt-14">
             <h2 class="lg:text-5xl md:text-3xl max-sm:text-2xl font-bold">Adopt Your Best Friend</h2>
             <p class="text-gray-500">It is a long established fact that a reader will be distracted by the readable
                 content of a <br class="lg:block md:hidden max-sm:hidden"> page when looking at its layout. The point of
                 using Lorem Ipsum is that it has a.</p>
         </div>
         <!-- section category  -->
-        <div id="category" class="w-11/12 mx-auto lg:flex justify-between space-y-1  my-12"></div>
+        <div id="category" class="lg:flex justify-between space-y-1  my-12"></div>
         <!-- section best deal  -->
-        <div class="w-11/12 mx-auto my-12">
+        <div class="my-12">
             <div class="flex justify-between">
                 <h3 id="test" class="md:text-2xl max-sm:text-xl font-bold mb-8">Best Deal For you</h3>
                 <button id="btn-sort" class="btn bg-emerald-800 rounded-lg text-white text-xl">Sort by Price</button>
             </div>
             <div class="flex max-sm:flex-col-reverse md:space-x-2 mx-auto">
                 <!-- <div id="spinner" class="loading loading-spinner loading-lg"></div> -->
-                <div id="not-available" class="hidden md:w-8/10 lg:p-40 md:p-11 max-sm:p-5 bg-orange-100 text-center space-y-3">
-                    <img class="mx-auto" width="200" height="200" src="https://img.icons8.com/plasticine/100/not-applicable.png" alt="not-applicable"/>
+                <div id="not-available"
+                    class="hidden md:w-8/10 lg:p-40 md:p-11 max-sm:p-5 bg-orange-100 text-center space-y-3 rounded-xl">
+                    <img class="mx-auto" width="200" height="200"
+                        src="https://img.icons8.com/plasticine/100/not-applicable.png" alt="not-applicable" />
                     <h2 class="text-4xl font-bold">No Information Available</h2>
-                    <p class="text-lg text-gray-500">It is long established fact a reader will be distracted by the readable
+                    <p class="text-lg text-gray-500">It is long established fact a reader will be distracted by the
+                        readable
                         content of a page when looking at its layout. The point of using lorem Ipsum is that it has a.
                     </p>
                 </div>
                 <div id="display-cards" class="md:w-8/10 grid grid-cols-1 lg:grid-cols-3 gap-4"></div>
-                <div class="md:w-2/10 rounded-lg border-2 border-gray-200 mb-2 p-2">
+                <div class="md:w-2/10 rounded-lg border-2 border-gray-200 max-sm:mb-2 p-2">
                     <h3 class="text-lg font-bold text-center">Liked Paddy</h3>
                     <div id="liked-img" class="grid md:grid-cols-2 max-sm:grid-cols-5 gap-2"></div>
                 </div>
             </div>
         </div>
     </main>
+    <footer id="footer" class="text-white bg-black md:py-24 max-sm:py-12">
+        <div class="w-11/12 mx-auto md:flex justify-between max-sm:space-y-4">
+            <div class="space-y-6">
+                <div class="flex space-x-3 text-3xl font-bold">
+                    <img src="images/logo.webp" alt="logo">
+                    <h2>Peddy</h2>
+                </div>
+                <div>
+                    <p class="text-base text-gray-500">Location: av. Washington 165, NY CA 54003</p>
+                    <p class="text-base text-gray-500">Phone: +31 85 964 47 25</p>
+                    <p class="text-base text-gray-500">Email: info@yourdomain.com</p>
+                    <p class="text-base text-gray-500">Openings hours: 9.00 AM - 5.00 PM</p>
+                </div>
+                <div class="flex space-x-3">
+                    <img class="h-full" width="48" height="48" src="https://img.icons8.com/color/48/facebook-new.png"
+                        alt="facebook-new" />
+                    <img class="h-full"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADrUlEQVR4nO2ZeYhNYRjGj3WMfc2W7AnRZEmULJEsSTRK4g8UylL8QUhRFFGEECFSokG2sdUgCSHbkGTLvu/78tNr3pvP6X7fnDvn3Jmr7vPXNPc5z/t893zL+z3X89JII400/nsApYBcguMXMCBiD2MN/eNARlGFGgKvEhjMQ6BmRIPoB3xX3etAjbCCo1XsLdDYwikNHFPe1lAFvT96bYE3qvccaBFWMya8XUVPiGkLpynwTnnDQ9SqD9xTnU9A11DmfeK1gccqPtXBG6+cF2KoCHUqAmeMNTcitPk4RQZrgc/y6h28/co7JBtGAvplgN3Gepsemfk4xTZqkfNAOQungb4RwbgEtFcYg1gXqfE4xaoCd7XYXAdvqHI+BFmowDRjELlA2cjNxynaHfipW2NnB2+bGjsp08bBGwT8UO5VoFrSzMcpvkwLXwMyLZzqwH3XfAc66luLnUGNkm7eZ6CCfnuCJQ5eX919vgDtfJ81AZ6oxnsgq1jM+wF0AL7pNOvp4K1VsxeA8sZau6z/l2k12CtJAPPUzB2gioVTCbipPOGXA44Yi3tS8Tv3QU2dK2zL9G0QB41BLPVSBUBrbSUEgxy8xfyLva7drERgnAOPgFoWTgZwxZiKFb1UAwXdb56a3OngZQFfdZr18lIRFGyn0urjavaAOcq5H/qOkSxIb6UmX9sON2k/gNPK2+ClKoAcNXnY1v0CzfUQFAzzUhFAHeCpmpzg4E1WzjOgrpeKADarSemjmjvCjaPKy/FSDcAY33lxynZe+MKNUV6qgIImUfovwQ3ggf49I0C4Yd0gihVAGzWD3hBbAn2M7re949kd+pxMtcDX48ihycdd407fzfhslf7/Yqz7tYQbT0q0iQQyjXNBvv2RcZIRmWaCBQHCjY9Aq2Ix72tNdhkLO+5akGxK7x3SmnR36G1SnXO2cCMpAJYbg1hfCHeh8m4BlS2casYUnZ00476iU41B5Nnmv8Evr+tEsNLB661TVO4unZJi3ig20Eg+8iVoSCDT/axG+wd40/mSD0Rq3ndX/2DcPxon+PxMffaBLbnn33BjUWTmfSdxLOKRW2GXIm4Q8luHYEvAcKNHaPOGsCQfl9SAiA8JodXMSO6zHbz5yrltCzeKEjJIWx7DlAg0Jxq/f9Rz3F3OKm9N2JoiuNoYxLLQgn+73wOquSdguDEwTMFZxiD2RZl8aHL/kuB4ZAs3CiuUresh9lNCpagGYdQYSWLIidpDGmmkkYZXIvgN512wkCtSZR4AAAAASUVORK5CYII="
+                        alt="twitterx--v2">
+                    <img class="h-full" width="48" height="48" src="https://img.icons8.com/color/48/youtube-play.png"
+                        alt="youtube-play" />
+                    <img class="h-full" width="48" height="48" src="https://img.icons8.com/fluency/48/instagram-new.png"
+                        alt="instagram-new" />
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-lg font-bold">Useful Links</h4>
+                <div>
+                    <p class="text-base text-gray-500">Home</p>
+                    <p class="text-base text-gray-500">About Us</p>
+                    <p class="text-base text-gray-500">Animals</p>
+                    <p class="text-base text-gray-500">Foundation</p>
+                    <p class="text-base text-gray-500">Contact</p>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h4 class="text-lg font-bold">Drop a Message</h4>
+                <fieldset class="fieldset">
+                    <input type="email" class="input bg-gray-900 rounded-lg w-full" placeholder="Enter your email" />
+                    <button class="btn btn-neutral bg-emerald-800 rounded-lg mt-4 btn-user">Login</button>
+                </fieldset>
+            </div>
+        </div>
+    </footer>
 
 
 
 
+    <dialog id="my_modal_2" class="modal modal-bottom sm:modal-middle ">
+        <div class="modal-box max-w-md  text-center py-12 relative overflow-hidden">
+            <img class="rounded-full mx-auto h-1/5 w-1/5 border-2 border-gray-200
+                 " src="images/user.gif" alt="">
+            <fieldset class="fieldset">
+                <label class="label">Email</label>
+                <input type="email" class="input w-full" placeholder="Email" />
+                <label class="label">Password</label>
+                <input type="password" class="input w-full" placeholder="Password" />
+                <label id="re-pass-l" class="label hidden">Re-Password</label>
+                <input id="re-pass-i" type="password" class="input w-full hidden" placeholder="Re-Password" />
+                <div class="text-right"><a class="link link-hover">Forgot password?</a></div>
+                <div class="text-left space-x-1">
+                    <input type="checkbox" id="checkbox" class="checkbox" /><span>New Registration</span>
+                </div>
 
+            </fieldset>
+
+            <div class="modal-action">
+                <form method="dialog" class="w-full">
+                    <button id="btn-toggle" class="btn w-full text-white bg-emerald-800">Log In</button>
+                    <button
+                        class="absolute -top-3 -right-3 bg-red-500 p-3 w-16  rounded-full text-white text-3xl">✕</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
     <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
         <div class="modal-box max-w-3xl text-gray-500">
             <img src="" alt="" id="img" class="rounded-md w-full">
@@ -127,7 +210,7 @@
                 </div>
             </div>
 
-            <hr class="text-gray-200">
+            <hr class="text-gray-200 my-2">
 
             <h3 class="text-lg font-bold text-black">Detail Information</h3>
             <p id="detail" class="py-4"></p>
@@ -140,7 +223,6 @@
             </div>
         </div>
     </dialog>
-
     <dialog id="my_modal_6" class="modal modal-bottom sm:modal-middle">
         <div class="modal-box max-w-md  text-center">
             <img class="rounded-md mx-auto" src="https://img.icons8.com/3d-fluency/94/handshake--v1.png"
@@ -154,9 +236,6 @@
 
 
 
-
-
-    <footer></footer>
     <script src="js/index.js"></script>
 </body>
 
